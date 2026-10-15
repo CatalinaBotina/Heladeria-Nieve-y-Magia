@@ -1,18 +1,14 @@
+
 <?php
-// Variables del negocio (Reto 1)
-$nombreHeladeria = "Heladería Nieve & Magia";
+$nombreHeladeria = "Nieve & Magia";
 $administrador = "Mayra Catalina Caipe Botina";
 $ciudad = "Pasto";
 
-// Edad para mensaje de bienvenida (Reto 2)
-$edadCliente = 19;
-
-// Día de la semana para promociones (Reto 3)
-$diaSemana = "Miercoles"; 
-
-// Disponibilidad del Sabor Especial del Mes (Reto 4)
+$edadCliente = 20;
+$diaSemana = "Martes";
 $saborDisponible = true;
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -21,92 +17,121 @@ $saborDisponible = true;
     <title><?php echo $nombreHeladeria; ?></title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
-    <!-- Encabezado con datos del negocio (Reto 1) -->
     <header>
-        <h1>🍧 <?php echo $nombreHeladeria; ?> 🍧</h1>
-        <p>Administradora: <strong><?php echo $administrador; ?></strong> | Ciudad: <strong><?php echo $ciudad; ?></strong></p>
+        <h1>🍦 <?php echo $nombreHeladeria; ?></h1>
+        <p>Helados ricos para alegrar tu día 💜</p>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#sabores">Nuestros helados</a>
+            <a href="#promocion">Promoción</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
     </header>
 
-    <!-- Bienvenida según edad (Reto 2) -->
-    <section>
+    <section class="presentacion" id="inicio">
+        <h2>¡Bienvenidos a nuestra heladería!</h2>
+
         <p>
-            <?php 
-            if ($edadCliente < 18) {
-                echo "¡Hola! Bienvenido a nuestra heladería, descubre los sabores más divertidos pensados para ti.";
-            } else {
-                echo "¡Bienvenido! Revisa nuestras promociones y combos especiales de la semana.";
-            }
-            ?>
+            En Nieve & Magia encontrarás helados deliciosos
+            de diferentes sabores. Tenemos opciones para todos
+            los gustos y queremos que disfrutes cada cucharada.
         </p>
+
+        <p><strong>📍 Estamos en <?php echo $ciudad; ?>.</strong></p>
     </section>
 
-    <!-- Sección de Promociones según el día (Reto 3) -->
-    <section>
-        <h2>Promoción del Día</h2>
-        <p>
-            <?php 
-            if ($diaSemana == "Miercoles") {
-                echo "🎉 ¡Miércoles de locura! Lleva 2x1 en todos los conos y toppings gratis.";
-            } else {
-                echo "Ven y prueba nuestras combinaciones artesanales únicas en la ciudad.";
-            }
-            ?>
-        </p>
+    <section class="datos">
+        <h2>Conoce nuestro negocio 🏪</h2>
+
+        <p><strong>Nombre:</strong> <?php echo $nombreHeladeria; ?></p>
+        <p><strong>Administradora:</strong> <?php echo $administrador; ?></p>
+        <p><strong>Ciudad:</strong> <?php echo $ciudad; ?></p>
     </section>
 
-    <!-- Catálogo de Sabores -->
-    <section>
-        <h2>Nuestra Menú de Sabores</h2>
-        <div class="tarjetas-contenedor">
-            
-            <div class="tarjeta">
-                <img src="img/halloween.jpg" alt="Edición Especial Halloween">
-                <h3>Edición Halloween</h3>
-                <p class="precio">$6.500</p>
+    <section class="mensaje">
+        <h2>💌 Un mensaje para ti</h2>
+
+        <?php
+        if ($edadCliente >= 18) {
+            echo "<p>¡Bienvenido! Conoce nuestras promociones especiales.</p>";
+        } else {
+            echo "<p>¡Bienvenido! Descubre nuestros deliciosos sabores.</p>";
+        }
+        ?>
+    </section>
+
+    <section id="sabores">
+        <h2 class="titulo">Nuestros sabores 🍨</h2>
+        <p class="subtitulo">¿Cuál se te antoja?</p>
+
+        <div class="contenedor-helados">
+
+            <div class="helado">
+                <img src="img/Mora.jpg" alt="Helado de mora">
+                <h3>Mora encantada</h3>
+                <p>Un delicioso sabor a mora.</p>
+                <h4>$5.000</h4>
             </div>
 
-            <div class="tarjeta">
-                <img src="img/heladodemoraazul.jpg" alt="Helado de Mora Azul">
-                <h3>Mora Azul</h3>
-                <p class="precio">$5.800</p>
+            <div class="helado">
+                <img src="img/heladodemoraazul.jpg" alt="Helado de mora azul">
+                <h3>Mora azul</h3>
+                <p>Un sabor diferente y especial.</p>
+                <h4>$6.000</h4>
             </div>
 
-            <div class="tarjeta">
-                <img src="img/limon.jpg" alt="Helado de Limón">
-                <h3>Limón Refrescante</h3>
-                <p class="precio">$5.000</p>
+            <div class="helado">
+                <img src="img/limon.jpg" alt="Helado de limón">
+                <h3>Limón feliz</h3>
+                <p>Perfecto para refrescarte.</p>
+                <h4>$4.500</h4>
             </div>
 
-            <div class="tarjeta">
-                <img src="img/Mora.jpg" alt="Helado de Mora">
-                <h3>Mora Silvestre</h3>
-                <p class="precio">$5.500</p>
+            <div class="helado">
+                <img src="img/halloween.jpg" alt="Helado especial">
+                <h3>Helado mágico</h3>
+                <p>Una sorpresa llena de sabor.</p>
+                <h4>$6.500</h4>
             </div>
 
         </div>
     </section>
 
-    <!-- Disponibilidad de Sabor Especial (Reto 4) -->
-    <section>
-        <p>Estado de la Edición Especial de Temporada: 
-            <strong>
-                <?php 
-                if ($saborDisponible == true) {
-                    echo "¡Disponible hoy en tienda!";
-                } else {
-                    echo "Agotado por el día de hoy.";
-                }
-                ?>
-            </strong>
-        </p>
+    <section class="promocion" id="promocion">
+        <h2>🎁 Promoción del día</h2>
+
+        <?php
+        if ($diaSemana == "Martes") {
+            echo "<p>¡Hoy tenemos 2x1 en conos!</p>";
+        } else {
+            echo "<p>Hoy puedes disfrutar de nuestros sabores habituales.</p>";
+        }
+        ?>
     </section>
 
-    <!-- Pie de página -->
-    <footer>
-        <p>📞 Contacto: 3103516188 | ✉️ contacto@nieveymagia.com</p>
-        <p>&copy; 2026 Heladería Nieve & Magia - Pasto</p>
+    <section class="disponibilidad">
+        <h2>🍧 Nuestro sabor especial</h2>
+
+        <?php
+        if ($saborDisponible == true) {
+            echo "<p class='disponible'>¡Este sabor está disponible! 💚</p>";
+        } else {
+            echo "<p class='agotado'>Lo sentimos, este sabor está agotado.</p>";
+        }
+        ?>
+    </section>
+
+    <footer id="contacto">
+        <h2>🍦 Nieve & Magia</h2>
+        <p>Gracias por visitar nuestra heladería 💜</p>
+        <p>📞 310 351 6188</p>
+        <p>✉️ contacto@nieveymagia.com</p>
+        <p>📍 Pasto, Colombia</p>
+        <p class="final">Trabajo académico de HTML, CSS y PHP</p>
     </footer>
 
 </body>

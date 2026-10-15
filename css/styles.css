@@ -1,0 +1,201 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff7fc;
+    color: #49384f;
+}
+
+header {
+    background-color: #e8d5f5;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    color: #794b91;
+    margin: 0;
+}
+
+header p {
+    color: #715b79;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: #674079;
+    text-decoration: none;
+    margin: 8px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #d45d9c;
+}
+
+.presentacion {
+    text-align: center;
+    padding: 35px 20px;
+    background-color: #fce5f0;
+}
+
+.presentacion h2 {
+    color: #a34f83;
+}
+
+.presentacion p {
+    max-width: 650px;
+    margin: 12px auto;
+    line-height: 1.6;
+}
+
+.datos,
+.mensaje,
+.promocion,
+.disponibilidad {
+    margin: 25px auto;
+    padding: 22px;
+    width: 80%;
+    max-width: 750px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 3px 8px #eaddec;
+}
+
+.datos h2,
+.mensaje h2,
+.promocion h2,
+.disponibilidad h2 {
+    color: #8b59a4;
+}
+
+.mensaje {
+    background-color: #f0e5ff;
+}
+
+.titulo {
+    text-align: center;
+    color: #8b59a4;
+    margin-top: 45px;
+    margin-bottom: 5px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #806d86;
+    margin-bottom: 25px;
+}
+
+.contenedor-helados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+    padding: 10px 20px 40px;
+}
+
+.helado {
+    width: 220px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 3px 8px #eaddec;
+    transition: transform 0.3s;
+}
+
+.helado:hover {
+    transform: translateY(-5px);
+}
+
+.helado img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 9px;
+}
+
+.helado h3 {
+    color: #9254a4;
+    margin-bottom: 8px;
+}
+
+.helado p {
+    color: #786b7d;
+    font-size: 14px;
+}
+
+.helado h4 {
+    color: #c14e91;
+    font-size: 18px;
+}
+
+.promocion {
+    background-color: #fce5f0;
+    text-align: center;
+}
+
+.promocion p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #a34f83;
+}
+
+.disponibilidad {
+    background-color: #eff8ed;
+    text-align: center;
+}
+
+.disponible {
+    color: #398048;
+    font-weight: bold;
+}
+
+.agotado {
+    color: #bd394b;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 40px;
+    background-color: #79518b;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+footer h2 {
+    margin-top: 0;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+.final {
+    border-top: 1px solid #bfa5ca;
+    padding-top: 15px;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    .datos,
+    .mensaje,
+    .promocion,
+    .disponibilidad {
+        width: 85%;
+    }
+
+    .helado {
+        width: 85%;
+        max-width: 280px;
+    }
+}
